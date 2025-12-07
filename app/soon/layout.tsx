@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -21,12 +22,15 @@ export default function PageLayout({
             <Link href="#" className="text-xs tracking-wide hover:opacity-70">
               Shop
             </Link>
-            <Link href="#" className="text-xs tracking-wide hover:opacity-70">
+            <Link
+              href="/soon/about"
+              className="text-xs tracking-wide hover:opacity-70"
+            >
               About
             </Link>
           </div>
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Link href="#" className="text-sm tracking-[0.2em] font-medium">
+            <Link href="/soon" className="text-sm tracking-[0.2em] font-medium">
               AVENUE ATELIER
             </Link>
           </div>
@@ -61,10 +65,16 @@ export default function PageLayout({
               <h4 className="text-sm tracking-wide mb-6">
                 Join the world of Avenue Atelier
               </h4>
-              <form className="space-y-3">
+              <form
+                action="https://app.kit.com/forms/18eea8851a/subscriptions"
+                method="post"
+                className="space-y-3"
+              >
                 <input
                   type="email"
+                  name="email_address"
                   placeholder="your email address"
+                  required
                   className="w-full border border-gray-300 px-4 py-3 text-xs focus:outline-none focus:border-gray-900 transition-colors"
                 />
                 <button
@@ -80,7 +90,7 @@ export default function PageLayout({
             <div className="grid grid-cols-2 gap-64 ml-auto">
               <div className="space-y-3">
                 <Link
-                  href="#"
+                  href="/soon/about"
                   className="block text-xs tracking-wide hover:opacity-70"
                 >
                   About
