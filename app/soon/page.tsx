@@ -43,6 +43,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Feature Image */}
+      <section className="snap-section h-screen">
+        <div className="relative w-full h-full">
+          <Image
+            src="/media/feature.jpg"
+            alt="Feature"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </section>
+
       {/* Product Overview */}
       <section className="snap-section h-screen flex items-center justify-center">
         <div className="mx-auto px-6">
