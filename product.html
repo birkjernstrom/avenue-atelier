@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Avenue Atelier</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            html {
+                scroll-snap-type: y mandatory;
+            }
+            .snap-section {
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+            }
+        </style>
+    </head>
+    <body class="bg-white text-gray-900">
+        <!-- Header -->
+        <header
+            class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100"
+        >
+            <nav class="flex items-center justify-between px-6 py-4">
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-xs tracking-wide hover:opacity-70"
+                        >Shop</a
+                    >
+                    <a href="#" class="text-xs tracking-wide hover:opacity-70"
+                        >About</a
+                    >
+                </div>
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <a href="#" class="text-sm tracking-[0.2em] font-medium"
+                        >AVENUE ATELIER</a
+                    >
+                </div>
+                <div>
+                    <a href="#" class="hover:opacity-70">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Product Section - Tote -->
+        <section
+            id="tote"
+            class="snap-section h-screen flex items-center justify-center"
+        >
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- Product Image -->
+                    <div
+                        class="relative bg-stone-100 aspect-square overflow-hidden"
+                    >
+                        <img
+                            id="tote-image"
+                            src="assets/product/tote/1.jpg"
+                            alt="Elsa Tote Bag"
+                            class="w-full h-full object-cover"
+                        />
+                        <button
+                            onclick="
+                                const img =
+                                    document.getElementById('tote-image');
+                                img.src = img.src.includes('1.jpg')
+                                    ? 'assets/product/tote/2.jpg'
+                                    : 'assets/product/tote/1.jpg';
+                            "
+                            class="absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-shadow"
+                        >
+                            <svg
+                                class="w-4 h-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="pt-4">
+                        <h1 class="text-base font-medium mb-2">
+                            Elsa Tote Bag
+                        </h1>
+                        <p class="text-sm text-gray-600 mb-1">7990 SEK</p>
+                        <p class="text-sm text-gray-600 mb-6">Black</p>
+
+                        <button
+                            class="w-full border border-gray-900 py-3 text-sm tracking-wide hover:bg-gray-900 hover:text-white transition-colors mb-8"
+                        >
+                            PRE-ORDER
+                        </button>
+
+                        <div class="space-y-3">
+                            <details class="group">
+                                <summary
+                                    class="text-xs tracking-wide cursor-pointer hover:opacity-70 list-none flex items-center"
+                                >
+                                    <span>Details</span>
+                                    <svg
+                                        class="w-3 h-3 ml-2 transform group-open:rotate-180 transition-transform"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg>
+                                </summary>
+                                <p
+                                    class="mt-3 text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Crafted from premium Italian leather, the
+                                    Elsa Tote Bag combines timeless elegance
+                                    with everyday functionality. Features
+                                    interior pockets and magnetic closure.
+                                </p>
+                            </details>
+
+                            <details class="group">
+                                <summary
+                                    class="text-xs tracking-wide cursor-pointer hover:opacity-70 list-none flex items-center"
+                                >
+                                    <span>Measurements</span>
+                                    <svg
+                                        class="w-3 h-3 ml-2 transform group-open:rotate-180 transition-transform"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg>
+                                </summary>
+                                <p
+                                    class="mt-3 text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Height: 32 cm | Width: 40 cm | Depth: 15 cm
+                                    | Handle drop: 22 cm
+                                </p>
+                            </details>
+
+                            <details class="group">
+                                <summary
+                                    class="text-xs tracking-wide cursor-pointer hover:opacity-70 list-none flex items-center"
+                                >
+                                    <span>Shipping & Returns</span>
+                                    <svg
+                                        class="w-3 h-3 ml-2 transform group-open:rotate-180 transition-transform"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg>
+                                </summary>
+                                <p
+                                    class="mt-3 text-xs text-gray-600 leading-relaxed"
+                                >
+                                    Free shipping on all orders. Returns
+                                    accepted within 14 days of delivery. Items
+                                    must be unused and in original packaging.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tagline -->
+        <section class="snap-section h-screen flex items-center justify-center">
+            <div class="text-center">
+                <p class="text-sm tracking-wide mb-2">Designed in Stockholm</p>
+                <p class="text-sm tracking-wide">Made in Italy</p>
+            </div>
+        </section>
+
+        <!-- Newsletter & Footer -->
+        <section class="snap-section h-screen flex flex-col justify-center">
+            <div class="max-w-md mx-auto text-center px-6 mb-16">
+                <p class="text-xs tracking-wide mb-6">
+                    Join our mailing list for news and updates
+                </p>
+                <form class="space-y-3">
+                    <input
+                        type="email"
+                        placeholder="your email address"
+                        class="w-full border border-gray-300 px-4 py-3 text-xs text-center focus:outline-none focus:border-gray-900 transition-colors"
+                    />
+                    <button
+                        type="submit"
+                        class="w-full border border-gray-900 py-3 text-xs tracking-wide hover:bg-gray-900 hover:text-white transition-colors"
+                    >
+                        Join the world of Avenue Atelier
+                    </button>
+                </form>
+            </div>
+
+            <footer class="border-t border-gray-200 py-12 px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                        <div class="space-y-3">
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >About</a
+                            >
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Contact</a
+                            >
+                        </div>
+                        <div class="space-y-3">
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Sustainability</a
+                            >
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Craftsmanship</a
+                            >
+                        </div>
+                        <div class="space-y-3">
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Shipping</a
+                            >
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Returns</a
+                            >
+                        </div>
+                        <div class="space-y-3">
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Product care</a
+                            >
+                            <a
+                                href="#"
+                                class="block text-xs tracking-wide hover:opacity-70"
+                                >Payment</a
+                            >
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-sm tracking-[0.2em] font-medium">
+                            AVENUE ATELIER
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </body>
+</html>

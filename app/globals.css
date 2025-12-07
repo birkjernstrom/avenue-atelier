@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Gordita";
+    src:
+        url("/fonts/Gordita/font.woff2") format("woff2"),
+        url("/fonts/Gordita/font.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gordita";
+    src:
+        url("/fonts/GorditaMedium/font.woff2") format("woff2"),
+        url("/fonts/GorditaMedium/font.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: "Gordita", sans-serif;
+    font-weight: 400;
+    background: #ffffff;
+    color: #111827;
+}
+
+.font-medium,
+b,
+strong {
+    font-weight: 500;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
