@@ -24,10 +24,9 @@ export default function Product({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = use(params);
-  console.log("slug visited", slug);
   const [openSection, setOpenSection] = useState<string | null>(null);
 
-  const product = PRODUCTS[slug];
+  const product = PRODUCTS[slug as keyof typeof PRODUCTS];
   if (!product) {
     return <div>Product not found</div>;
   }
@@ -38,7 +37,7 @@ export default function Product({
 
   return (
     <>
-      <section className="snap-section flex flex-col py-80 px-8">
+      <section className="snap-section flex flex-col py-80 px-8 min-h-screen">
         <div className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-16">
           {/* Product Image */}
           <div className="flex items-start justify-center">
@@ -53,8 +52,8 @@ export default function Product({
           </div>
 
           {/* Product Details */}
-          <div className="flex flex-col justify-center w-[320px]">
-            <h1 className="font-semibold mb-4">{product.name}</h1>
+          <div className="flex flex-col justify-start w-[320px]">
+            <h1 className="text-sm font-semibold mb-4">{product.name}</h1>
             <p className="text-base text-gray-800 mb-3">
               {product.description}
             </p>
